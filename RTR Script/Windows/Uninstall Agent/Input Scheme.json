@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "MaintenanceToken": {
+      "type": "string",
+      "title": "Maintenance Token",
+      "description": "Enter the maintenance token for the batch script"
+    },
+    "CsUninstallToolLocation": {
+      "type": "string",
+      "title": "CsUninstallTool.exe Location",
+      "description": "Path to the folder where CsUninstallTool.exe is located"
+    }
+  },
+  "required": [
+    "MaintenanceToken",
+    "CsUninstallToolLocation"
+  ],
+  "type": "object"
+}
