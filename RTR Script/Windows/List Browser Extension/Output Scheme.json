@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "Username": {
+      "type": "string"
+    },
+    "Browser": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "string"
+    },
+    "Version": {
+      "type": "string"
+    },
+    "ManifestVersion": {
+      "type": "string"
+    },
+    "ContentSecurityPolicy": {
+      "type": "string"
+    },
+    "OfflineEnabled": {
+      "type": "boolean"
+    },
+    "Permissions": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "Username",
+    "Browser",
+    "Name",
+    "Id",
+    "Version"
+  ],
+  "type": "object"
+}
