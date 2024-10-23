@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "Status of the batch file execution"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional information regarding the execution"
+    }
+  },
+  "required": [
+    "status",
+    "message"
+  ],
+  "type": "object"
+}
