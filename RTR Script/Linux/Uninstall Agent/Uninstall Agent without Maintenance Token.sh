@@ -6,13 +6,13 @@ cat <<EOF > /tmp/uninstall_crowdstrike.sh
 
 # Detect the Linux distribution and uninstall the CrowdStrike sensor
 if grep -qi 'ubuntu\|debian' /etc/*release; then
-    sudo apt purge falcon-sensor -y
+    sudo apt purge falcon-sensor -y &
 elif grep -qi 'rhel\|centos\|oracle\|amazon' /etc/*release; then
-    sudo yum remove falcon-sensor -y
+    sudo yum remove falcon-sensor -y &
 elif grep -qi 'sles\|suse' /etc/*release; then
-    sudo zypper remove falcon-sensor -y
+    sudo zypper remove falcon-sensor -y &
 elif grep -qi 'photon' /etc/*release; then
-    sudo tdnf remove falcon-sensor -y
+    sudo tdnf remove falcon-sensor -y &
 else
     echo '{"status": "error", "message": "Unsupported Linux distribution."}' > /tmp/uninstall_crowdstrike.log
     exit 1
